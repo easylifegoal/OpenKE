@@ -4,7 +4,10 @@ from openke.module.model import TransE
 from openke.module.loss import MarginLoss
 from openke.module.strategy import NegativeSampling
 from openke.data import TrainDataLoader, TestDataLoader
+import os
 
+# specify gpu
+os.environ['CUDA_VISIBLE_DEVICES']='3'
 # dataloader for training
 train_dataloader = TrainDataLoader(
 	in_path = "./benchmarks/FB15K237/",
