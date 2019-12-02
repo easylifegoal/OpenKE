@@ -59,7 +59,7 @@ class Tester(object):
         else:
             return Variable(torch.from_numpy(x))
 
-    def test_one_step(self, data):        
+    def test_one_step(self, data):
         return self.model.predict({
             'batch_h': self.to_var(data['batch_h'], self.use_gpu),
             'batch_t': self.to_var(data['batch_t'], self.use_gpu),
@@ -149,3 +149,5 @@ class Tester(object):
                 total_current += 1.0
 
         return acc, threshlod
+
+    # def run_head_prediction(self, type_constrain = False):
