@@ -4,7 +4,9 @@ from openke.module.model import TransE
 from openke.module.loss import MarginLoss
 from openke.module.strategy import NegativeSampling
 from openke.data import TrainDataLoader, TestDataLoader
+import os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 with open("./benchmarks/TEST/test2idAll.txt", "r") as f:
 	testList = f.readlines()
 testTotal = int(testList[0])
